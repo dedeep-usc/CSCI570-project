@@ -26,4 +26,4 @@ from inefficient import *
 
 
 
-print(find_min_cost("ACGT", "TGCA"))
+print(find_min_cost("AGGCGCTATATAT", "TCGCGAGAGAGACTC"))

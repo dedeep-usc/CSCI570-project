@@ -64,8 +64,8 @@ def find_min_cost(str1, str2):
 					dp[i][j-1] + delta_val
 				)
 
-	for i in dp:
-		print(i)
+	# for i in dp:
+	# 	print(i)
 
 	return form_strings(dp, str1, str2)
 
@@ -87,16 +87,16 @@ def form_strings(dp, str1, str2):
 			new_str2 += str2[j-1]
 			i -= 1
 			j -= 1
-		
-		elif dp[i][j-1] + delta_val == cur_val:
-			new_str1 += "_"
-			new_str2 += str2[j-1]
-			j -= 1
 
 		elif dp[i-1][j] + delta_val == cur_val:
 			new_str1 += str1[i-1]
 			new_str2 += "_"
 			i -= 1
+
+		elif dp[i][j-1] + delta_val == cur_val:
+			new_str1 += "_"
+			new_str2 += str2[j-1]
+			j -= 1
 
 	while j > 0:
 		new_str1 += "_"
@@ -108,7 +108,9 @@ def form_strings(dp, str1, str2):
 		new_str2 += "_"
 		i -= 1
 
-	return new_str1[::-1], new_str2[::-1]
+	# return new_str1[::-1], new_str2[::-1]
+	return new_str1[::-1]
+	return new_str2[::-1]
 
 
 

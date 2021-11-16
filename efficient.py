@@ -66,15 +66,13 @@ def find_min_cost(str1, str2):
 					dp[i-1][1] + delta_val,
 					dp[i][0] + delta_val
 				)
-		# for i in dp:
-		# 	print(i)
-		# print("----------")
+
 		dp = move_col(dp)
 
-	# for i in dp:
-	# 	print(i)
 
-	return dp[-1][0]
+	# return dp[-1][0]
+	# print(dp[-1][0])
+	return dp
 
 def move_col(dp):
 	for i in range(len(dp)):
