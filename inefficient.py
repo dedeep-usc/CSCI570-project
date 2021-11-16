@@ -1,4 +1,4 @@
-delta_val = 7
+delta_val = 30
 alphas = {
 	"A": {
 		"A": 0,
@@ -43,13 +43,6 @@ alpha_list = [
 	[94, 48, 110, 0]
 ]
 
-# alpha_list = [
-# 	[0, 5, 5, 5],
-# 	[5, 0, 5, 5],
-# 	[5, 5, 0, 5],
-# 	[5, 5, 5, 0]
-# ]
-
 def find_min_cost(str1, str2):
 	dp = [[float("inf") for i in range(len(str2)+1)] for j in range(len(str1)+1)]
 	m = len(dp)
@@ -61,14 +54,6 @@ def find_min_cost(str1, str2):
 
 	for i in range(m):
 		dp[i][0] = i * delta_val
-
-	# for i in dp:
-	# 	print(i)
-
-	[0, 110, 48, 94],
-	[110, 0, 118, 48],
-	[48, 118, 0, 110],
-	[94, 48, 110, 0]
 
 	for i in range(1, m):
 		for j in range(1, n):
@@ -124,33 +109,6 @@ def form_strings(dp, str1, str2):
 		i -= 1
 
 	return new_str1[::-1], new_str2[::-1]
-
-
-
-
-# val = find_min_cost("AGCT", "AGT")
-
-# print(val)
-# print(find_min_cost("CG", "CA"))
-
-# print(find_min_cost("AGGGCT", "AGGCA"))
-
-# print(find_min_cost("GATCGGCAT", "CAATGTGAATC"))
-
-a = ["A", "C", "G", "T"]
-str1 = ""
-str2 = ""
-
-import random
-
-for i in range(10):
-	str1 += a[random.randint(0, 3)]
-
-for i in range(10):
-	str2 += a[random.randint(0, 3)]
-print("str1: {}, str2: {}".format(str1, str2))
-print(find_min_cost(str1, str2))
-
 
 
 
