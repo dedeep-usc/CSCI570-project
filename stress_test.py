@@ -55,11 +55,11 @@ def test_the_fuck_out_of_it(str1_len, str2_len):
 	else:
 		second_seq_not_same += 1
 
-n = 1000
+n = 100000
 
 for i in range(n):
-	str1_len = random.randint(0, 500)
-	str2_len = random.randint(0, 500)
+	str1_len = random.randint(0, 50)
+	str2_len = random.randint(0, 50)
 	test_the_fuck_out_of_it(str1_len, str2_len)
 
 same_cost_perc = same_cost / n * 100

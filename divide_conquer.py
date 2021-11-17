@@ -6,7 +6,7 @@ class DivideConquerSeqAlignment():
 		m = len(X)
 		n = len(Y)
 
-		if m <= 2 or n <= 2:
+		if m < 2 or n < 2:
 			return self.ineff.find_min_cost(X, Y)
 
 		first_half_dp = self.eff.find_min_cost(X, Y[:n//2])
