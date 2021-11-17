@@ -1,11 +1,3 @@
-import argparse
-import csv  
-
-parser = argparse.ArgumentParser() 
-parser.add_argument("--file", "-f", type=str, required=True)
-args = parser.parse_args()
-
-
 def input_generator(filename):
 	strs = []
 	str_count = 0
@@ -13,14 +5,20 @@ def input_generator(filename):
 	str_indices = {'0':[], '1':[]}
 
 	with open(filename) as inputfile:
-		reader = csv.reader(inputfile, delimiter='\n')
-		for row in reader:
-			if not str.isdigit(row[0]):
-				strs.append(row[0])
+		contents = inputfile.readlines()
+		
+		for line in contents:
+			stripped_line = line.strip()
+			
+			if not stripped_line.isdigit():
+				
+				strs.append(stripped_line)
 				index = str(str_count)
 				str_count+=1
 			else:
-				str_indices[index].append(int(row[0]))
+				
+				str_indices[index].append(int(stripped_line))
+			
 				
 
 	def str_validate(original_string, generated_string, i):
@@ -42,7 +40,7 @@ def input_generator(filename):
 		return (str1, str2)
 		
 
-print(input_generator(args.file))
+
 
 
 		
