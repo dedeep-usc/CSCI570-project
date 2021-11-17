@@ -43,7 +43,8 @@ class InefficientSeqAlignment():
 		# for i in dp:
 		# 	print(i)
 
-		return self.form_strings(dp, str1, str2)
+		seqs = self.form_strings(dp, str1, str2)
+		return seqs[0], seqs[1], dp[m-1][n-1]
 
 	def form_strings(self, dp, str1, str2):
 		m = len(dp)-1
@@ -84,7 +85,7 @@ class InefficientSeqAlignment():
 			new_str2 += "_"
 			i -= 1
 
-		# return new_str1[::-1], new_str2[::-1]
+		return new_str1[::-1], new_str2[::-1]
 		return new_str1[::-1]
 		return new_str2[::-1]
 

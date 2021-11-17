@@ -18,7 +18,7 @@ class EfficientSeqAlignment():
 		self.alpha_list = alpha_list
 		self.alpha_index_mapper = alpha_index_mapper
 
-	def find_min_cost(self, str1, str2):
+	def find_min_cost(self, str1, str2, return_cost=False):
 		dp = [[float("inf") for i in range(2)] for j in range(len(str1)+1)]
 
 		m = len(dp)
@@ -39,7 +39,7 @@ class EfficientSeqAlignment():
 					)
 
 			dp = self.move_col(dp)
-		return dp
+		return dp if not return_cost else dp[-1][0]
 
 
 	def move_col(self, dp):
