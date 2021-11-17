@@ -10,14 +10,14 @@ def input_generator(filename):
 		for line in contents:
 			stripped_line = line.strip()
 			
-			if not stripped_line.isdigit():
-				
-				strs.append(stripped_line)
-				index = str(str_count)
-				str_count+=1
-			else:
-				
+			if stripped_line.isdigit():
 				str_indices[index].append(int(stripped_line))
+				
+			else:
+				if stripped_line != '':
+					strs.append(stripped_line)
+					index = str(str_count)
+					str_count+=1
 			
 				
 
@@ -38,6 +38,8 @@ def input_generator(filename):
 
 	if str_validate(strs[1], str1, len(str_indices['1'])) and str_validate(strs[0], str1, len(str_indices['0'])):
 		return (str1, str2)
+	else:
+		raise Exception('Strings are not of length 2^i*Str.length')
 		
 
 
