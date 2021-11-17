@@ -1,3 +1,5 @@
 from efficient import *
 
-print(find_min_cost("ACGT", "TGCA"))
+eff = EfficientSeqAlignment()
+
+print(eff.find_min_cost("AGGCGCTATATAT", "TCGCGAGAGAGACTC"))
