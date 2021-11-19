@@ -45,21 +45,21 @@ def test_the_fuck_out_of_it(str1_len, str2_len):
 	else:
 		diff_cost += 1
 
-	if first_seq_div == second_seq_div:
+	if len(first_seq_div) == len(first_seq_ineff):
 		first_seq_same += 1
 	else:
 		first_seq_not_same += 1
 
-	if second_seq_div == second_seq_ineff:
+	if len(second_seq_div) == len(second_seq_ineff):
 		second_seq_same += 1
 	else:
 		second_seq_not_same += 1
 
-n = 100000
+n = 1000
 
 for i in range(n):
-	str1_len = random.randint(0, 50)
-	str2_len = random.randint(0, 50)
+	str1_len = random.randint(0, 500)
+	str2_len = random.randint(0, 500)
 	test_the_fuck_out_of_it(str1_len, str2_len)
 
 same_cost_perc = same_cost / n * 100

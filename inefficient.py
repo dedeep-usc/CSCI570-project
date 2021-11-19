@@ -75,6 +75,8 @@ class InefficientSeqAlignment():
 				new_str2 += str2[j-1]
 				j -= 1
 
+			
+
 		while j > 0:
 			new_str1 += "_"
 			new_str2 += str2[j-1]
