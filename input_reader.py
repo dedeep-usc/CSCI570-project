@@ -20,6 +20,9 @@ eff = EfficientSeqAlignment()
 ineff = InefficientSeqAlignment()
 div_conq = DivideConquerSeqAlignment(eff, ineff)
 
+if __name__ == "__main__":
+	div_conq_max_mem = max(memory_usage((div_conq.div_conq_alignment, (str1, str2,))))
+	ineff_max_mem = max(memory_usage((ineff.find_min_cost, (str1, str2,))))
 
 ineff_time_start = time.time()
 first_seq_ineff, second_seq_ineff, cost_ineff = ineff.find_min_cost(str1, str2)
@@ -61,9 +64,7 @@ INEFF_OP = """
 {}
 """
 
-if __name__ == "__main__":
-	div_conq_max_mem = max(memory_usage((div_conq.div_conq_alignment, (str1, str2,))))
-	ineff_max_mem = max(memory_usage((ineff.find_min_cost, (str1, str2,))))
+
 
 op_string1 = first_seq_ineff[:50] + " space " + first_seq_ineff[-50:]
 op_string2 = second_seq_ineff[:50] + " space " + second_seq_ineff[-50:]

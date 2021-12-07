@@ -30,6 +30,8 @@ def test_the_fuck_out_of_it(str1_len, str2_len):
 	str1 = ""
 	str2 = ""
 
+	# if __name__ == "__main__":
+	# 	print("rwhilgfjarekgnja")
 	for i in range(str1_len):
 		str1 += a[random.randint(0, 3)]
 
@@ -55,7 +57,7 @@ def test_the_fuck_out_of_it(str1_len, str2_len):
 	else:
 		second_seq_not_same += 1
 
-n = 1000
+n = 10
 
 for i in range(n):
 	str1_len = random.randint(0, 500)
