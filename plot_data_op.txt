@@ -1,0 +1,4 @@
+len of ineff_data before processing: 81
+len of eff_data before processing: 81
+len of ineff_data before processing: 80
+len of eff_data before processing: 80

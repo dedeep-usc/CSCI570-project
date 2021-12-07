@@ -18,6 +18,12 @@ first_seq_not_same = 0
 second_seq_same = 0
 second_seq_not_same = 0
 
+first_sec_div_seq_len_same = 0
+first_sec_div_seq_len_not_same = 0
+
+first_sec_ineff_seq_len_same = 0
+first_sec_ineff_seq_len_not_same = 0
+
 def generate_data(str1_len, str2_len):
 	global same_cost
 	global diff_cost
@@ -25,6 +31,10 @@ def generate_data(str1_len, str2_len):
 	global first_seq_not_same
 	global second_seq_same
 	global second_seq_not_same
+	global first_sec_div_seq_len_same
+	global first_sec_div_seq_len_not_same
+	global first_sec_ineff_seq_len_same
+	global first_sec_ineff_seq_len_not_same
 
 	a = ["A", "C", "G", "T"]
 	str1 = ""
@@ -57,11 +67,22 @@ def generate_data(str1_len, str2_len):
 	else:
 		second_seq_not_same += 1
 
-n = 10
+	if len(first_seq_div) == len(second_seq_div):
+		first_sec_div_seq_len_same += 1
+	else:
+		first_sec_div_seq_len_not_same += 1
+
+	if len(first_seq_ineff) == len(second_seq_ineff):
+		first_sec_ineff_seq_len_same += 1
+	else:
+		first_sec_ineff_seq_len_not_same += 1
+
+
+n = 1000
 
 for i in range(n):
-	str1_len = random.randint(0, 500)
-	str2_len = random.randint(0, 500)
+	str1_len = random.randint(0, 1000)
+	str2_len = random.randint(0, 1000)
 	generate_data(str1_len, str2_len)
 
 same_cost_perc = same_cost / n * 100
@@ -73,6 +94,13 @@ diff_first_seq_perc = first_seq_not_same / n * 100
 same_second_seq_perc = second_seq_same / n * 100
 diff_second_seq_perc = second_seq_not_same / n * 100
 
+first_sec_ineff_seq_len_same_perc = first_sec_ineff_seq_len_same / n * 100
+first_sec_ineff_seq_len_not_same_perc = first_sec_ineff_seq_len_not_same / n * 100
+
+first_sec_div_seq_len_same_perc = first_sec_div_seq_len_same / n * 100
+first_sec_div_seq_len_not_same_perc = first_sec_div_seq_len_not_same / n * 100
+
+
 print("total no of test cases: {}".format(n))
 print("--------------------------------------------------")
 print("same cost count: {}, same cost perc: {}".format(same_cost, same_cost_perc))
@@ -83,6 +111,12 @@ print("diff first seq count: {}, diff first seq perc: {}".format(first_seq_not_s
 print("--------------------------------------------------")
 print("same second seq count: {}, same second seq perc: {}".format(second_seq_same, same_second_seq_perc))
 print("diff second seq count: {}, diff second seq perc: {}".format(second_seq_not_same, diff_second_seq_perc))
+print("--------------------------------------------------")
+print("first_sec_ineff_seq_len_same count: {}, first_sec_ineff_seq_len_same perc: {}".format(first_sec_ineff_seq_len_same, first_sec_ineff_seq_len_same_perc))
+print("first_sec_ineff_seq_len_not_same count: {}, first_sec_ineff_seq_len_not_same perc: {}".format(first_sec_ineff_seq_len_not_same, first_sec_ineff_seq_len_not_same_perc))
+print("--------------------------------------------------")
+print("first_sec_div_seq_len_same: {}, first_sec_div_seq_len_same_perc: {}".format(first_sec_div_seq_len_same, first_sec_div_seq_len_same_perc))
+print("first_sec_div_seq_len_not_same: {}, first_sec_div_seq_len_not_same_perc: {}".format(first_sec_div_seq_len_not_same, first_sec_div_seq_len_not_same_perc))
 
 
 
