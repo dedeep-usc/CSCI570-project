@@ -1,5 +1,5 @@
-from inefficient import InefficientSeqAlignment
-from input_generator import input_generator
+from main.inefficient import InefficientSeqAlignment
+from main.input_generator import input_generator
 import argparse
 import time
 import tracemalloc
@@ -46,7 +46,7 @@ f.write(INEFF_OP)
 f.close()
 
 
-f = open("data_inefficient.txt", "a")
+f = open("./data/data_inefficient.txt", "a")
 
 data_str = "{},{},{}\n".format(len(first_seq_ineff)*len(second_seq_ineff), ineff_time, ineff_max_mem)
 

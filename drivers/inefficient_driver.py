@@ -1,7 +1,6 @@
-from inefficient import *
+from main.inefficient import *
 
 ineff = InefficientSeqAlignment()
-
 
 first_seq, second_seq, cost = ineff.find_min_cost("ACGT", "TCAG")
 

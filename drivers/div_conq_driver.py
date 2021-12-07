@@ -1,6 +1,6 @@
-from inefficient import InefficientSeqAlignment
-from efficient import EfficientSeqAlignment
-from divide_conquer import DivideConquerSeqAlignment
+from main.inefficient import InefficientSeqAlignment
+from main.efficient import EfficientSeqAlignment
+from main.divide_conquer import DivideConquerSeqAlignment
 
 ineff = InefficientSeqAlignment()
 eff = EfficientSeqAlignment()

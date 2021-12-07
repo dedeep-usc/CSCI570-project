@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 sys.stdout = open("plot_data_op.txt", "w")
 
 try:
-	ineff_f = open("data_inefficient.txt", "r")
+	ineff_f = open("./data/data_inefficient.txt", "r")
 	ineff_data = ineff_f.read()
-	eff_f = open("data_efficient.txt", "r")
+	eff_f = open("./data/data_efficient.txt", "r")
 	eff_data = eff_f.read()
-except e:
+except Exception as e:
 	print("Reading data files for plotting files failed. Please rerun the programs(basic, ineff) and then run the script to generate plot.")
 	exit()
 
