@@ -4,3 +4,7 @@ div_memory_usage-size.png
 div_time-size.png
 ineff_memory_usage-size.png
 ineff_time-size.png
+output_eff.txt
+output_ineff.txt
+size_vs_memory.png
+size_vs_time.png

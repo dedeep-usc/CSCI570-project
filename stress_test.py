@@ -18,7 +18,7 @@ first_seq_not_same = 0
 second_seq_same = 0
 second_seq_not_same = 0
 
-def test_the_fuck_out_of_it(str1_len, str2_len):
+def generate_data(str1_len, str2_len):
 	global same_cost
 	global diff_cost
 	global first_seq_same
@@ -62,7 +62,7 @@ n = 10
 for i in range(n):
 	str1_len = random.randint(0, 500)
 	str2_len = random.randint(0, 500)
-	test_the_fuck_out_of_it(str1_len, str2_len)
+	generate_data(str1_len, str2_len)
 
 same_cost_perc = same_cost / n * 100
 diff_cost_perc = diff_cost / n * 100
