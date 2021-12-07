@@ -40,8 +40,6 @@ class InefficientSeqAlignment():
 						dp[i][j-1] + self.delta_val
 					)
 
-		# for i in dp:
-		# 	print(i)
 
 		seqs = self.form_strings(dp, str1, str2)
 		return seqs[0], seqs[1], dp[m-1][n-1]
@@ -74,6 +72,8 @@ class InefficientSeqAlignment():
 				new_str1 += "_"
 				new_str2 += str2[j-1]
 				j -= 1
+
+			
 
 		while j > 0:
 			new_str1 += "_"

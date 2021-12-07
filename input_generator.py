@@ -36,7 +36,7 @@ def input_generator(filename):
 	str1 = generate(strs[0], str_indices['0'])
 	str2 = generate(strs[1], str_indices['1'])
 
-	if str_validate(strs[1], str1, len(str_indices['1'])) and str_validate(strs[0], str1, len(str_indices['0'])):
+	if str_validate(strs[1], str2, len(str_indices['1'])) and str_validate(strs[0], str1, len(str_indices['0'])):
 		return (str1, str2)
 	else:
 		raise Exception('Strings are not of length 2^i*Str.length')

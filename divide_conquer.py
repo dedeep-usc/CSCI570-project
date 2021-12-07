@@ -21,9 +21,6 @@ class DivideConquerSeqAlignment():
 			if cur_cost < actual_min_cost:
 				q = i
 
-		# partition = [first_half_dp[j][0] + second_half_dp[m-j][0] for j in range(m+1)]
-
-		# q = partition.index(min(partition))
 		partition = []
 		first_half_dp = []
 		second_half_dp = []
