@@ -7,7 +7,7 @@ import time
 import tracemalloc
 
 parser = argparse.ArgumentParser() 
-parser.add_argument("--file", "-f", type=str, required=True)
+parser.add_argument("file", type=str)
 args = parser.parse_args()
 
 str1, str2 = input_generator(args.file)
