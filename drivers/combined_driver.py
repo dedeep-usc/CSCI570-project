@@ -1,9 +1,9 @@
 import random
 import tracemalloc
 
-from inefficient import InefficientSeqAlignment
-from efficient import EfficientSeqAlignment
-from divide_conquer import DivideConquerSeqAlignment
+from main.inefficient import InefficientSeqAlignment
+from main.efficient import EfficientSeqAlignment
+from main.divide_conquer import DivideConquerSeqAlignment
 
 a = ["A", "C", "G", "T"]
 str1 = ""
@@ -14,9 +14,6 @@ for i in range(500):
 for i in range(500):
 	str2 += a[random.randint(0, 3)]
 
-
-# str1 = "ACACTGACTACTGACTGGTGACTACTGACTGGGGGGCCATAT"
-# str2 = "TATTATACGCTATTATACGCGACGCGGACGCG"
 ineff = InefficientSeqAlignment()
 eff = EfficientSeqAlignment()
 

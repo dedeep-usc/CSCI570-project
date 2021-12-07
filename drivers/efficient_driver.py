@@ -1,4 +1,4 @@
-from efficient import *
+from main.efficient import *
 
 eff = EfficientSeqAlignment()
 

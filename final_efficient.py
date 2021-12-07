@@ -1,7 +1,7 @@
-from divide_conquer import DivideConquerSeqAlignment
-from inefficient import InefficientSeqAlignment
-from efficient import EfficientSeqAlignment
-from input_generator import input_generator
+from main.divide_conquer import DivideConquerSeqAlignment
+from main.inefficient import InefficientSeqAlignment
+from main.efficient import EfficientSeqAlignment
+from main.input_generator import input_generator
 import argparse
 import time
 import tracemalloc
@@ -50,7 +50,7 @@ f.write(DIV_CONQ_OP)
 
 f.close()
 
-f = open("data_efficient.txt", "a")
+f = open("./data/data_efficient.txt", "a")
 
 data_str = "{},{},{}\n".format(len(first_seq_div)*len(second_seq_div), div_conq_time, div_conq_max_mem)
 
