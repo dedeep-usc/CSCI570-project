@@ -5,3 +5,4 @@ output_ineff.txt
 size_vs_memory.png
 size_vs_time.png
 .idea/
+data/plot_data_op.txt

@@ -1,7 +1,7 @@
 import sys
 import matplotlib.pyplot as plt
 
-sys.stdout = open("plot_data_op.txt", "w")
+sys.stdout = open("./data/plot_data_op.txt", "w")
 
 try:
 	ineff_f = open("./data/data_inefficient.txt", "r")
