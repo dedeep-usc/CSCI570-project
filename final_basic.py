@@ -21,8 +21,8 @@ ineff_time = ineff_time_end - ineff_time_start
 ineff_max_mem = ineff_peak / 10**3
 tracemalloc.stop()
 
-op_string1 = first_seq_ineff if len(first_seq_ineff)<=50 else first_seq_ineff[:50] + " " + first_seq_ineff[-50:]
-op_string2 = second_seq_ineff if len(second_seq_ineff)<=50 else second_seq_ineff[:50] + " " + second_seq_ineff[-50:]
+op_string1 = first_seq_ineff + ' ' + first_seq_ineff if len(first_seq_ineff)<=50 else first_seq_ineff[:50] + " " + first_seq_ineff[-50:]
+op_string2 = second_seq_ineff + ' ' + second_seq_ineff if len(second_seq_ineff)<=50 else second_seq_ineff[:50] + " " + second_seq_ineff[-50:]
 
 INEFF_OP = """{}
 {}

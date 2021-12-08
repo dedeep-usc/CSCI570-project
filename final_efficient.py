@@ -33,8 +33,8 @@ DIV_CONQ_OP = """{}
 {}
 """
 
-op_string1 = first_seq_div if len(first_seq_div)<=50 else first_seq_div[:50] + " " + first_seq_div[-50:]
-op_string2 = second_seq_div if len(second_seq_div)<=50 else second_seq_div[:50] + " " + second_seq_div[-50:]
+op_string1 = first_seq_div + ' ' + first_seq_div if len(first_seq_div)<=50 else first_seq_div[:50] + " " + first_seq_div[-50:]
+op_string2 = second_seq_div + ' ' + second_seq_div if len(second_seq_div)<=50 else second_seq_div[:50] + " " + second_seq_div[-50:]
 
 DIV_CONQ_OP = DIV_CONQ_OP.format(
 		op_string1,
