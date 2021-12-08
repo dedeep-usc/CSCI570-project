@@ -5,6 +5,8 @@ from input_generator import input_generator
 import argparse
 import csv 
 import time
+import logging
+logging.basicConfig(filename="input_reader.log", level=logging.INFO)
 
 parser = argparse.ArgumentParser() 
 parser.add_argument("--file", "-f", type=str, required=True)
@@ -12,8 +14,8 @@ args = parser.parse_args()
 
 str1, str2 = input_generator(args.file)
 
-print("str1: {}".format(str1))
-print("str2: {}".format(str2))
+logging.info("str1: {}".format(str1))
+logging.info("str2: {}".format(str2))
 
 eff = EfficientSeqAlignment()
 ineff = InefficientSeqAlignment()
@@ -76,11 +78,11 @@ INEFF_OP = INEFF_OP.format(
 	)
 
 
-print("divide_conquer: {}".format(DIV_CONQ_OP))
+logging.info("divide_conquer: {}".format(DIV_CONQ_OP))
 
-print("ineff: {}".format(INEFF_OP))
+logging.info("ineff: {}".format(INEFF_OP))
 
-print("cost: {}".format(cost_ineff))
+logging.info("cost: {}".format(cost_ineff))
 
 
 f = open("output_ineff.txt", "w")

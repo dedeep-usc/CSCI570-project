@@ -1,5 +1,8 @@
+import logging
+logging.basicConfig(filename="efficient_driver.log", level=logging.INFO)
+
 from main.efficient import *
 
 eff = EfficientSeqAlignment()
 
-print(eff.find_min_cost("AGGCGCTATATAT", "TCGCGAGAGAGACTC"))
+logging.info(eff.find_min_cost("AGGCGCTATATAT", "TCGCGAGAGAGACTC"))
