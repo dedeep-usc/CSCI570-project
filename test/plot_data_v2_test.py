@@ -3,6 +3,8 @@ import time
 import matplotlib.pyplot as plt
 import tracemalloc
 import sys
+import logging
+logging.basicConfig(filename="test.log")
 
 from main.inefficient import InefficientSeqAlignment
 from main.efficient import EfficientSeqAlignment
@@ -76,15 +78,15 @@ try:
     eff_f = open("data/data_efficient.txt", "r")
     eff_data = eff_f.read()
 except Exception as e:
-    print(
+    logging.info(
         "Reading data files for plotting files failed. Please rerun the programs(basic, ineff) and then run the script to generate plot.")
     exit()
 
 ineff_data = ineff_data.split("\n")
 eff_data = eff_data.split("\n")
 
-print("len of ineff_data before processing: {}".format(len(ineff_data)))
-print("len of eff_data before processing: {}".format(len(eff_data)))
+logging.info("len of ineff_data before processing: {}".format(len(ineff_data)))
+logging.info("len of eff_data before processing: {}".format(len(eff_data)))
 
 ineff_df = {
     "size": [],
@@ -139,8 +141,8 @@ for data in processed_eff_data:
     eff_df["eff_time"].append(data[1])
     eff_df["eff_memory_usage"].append(data[2])
 
-print("len of ineff_data before processing: {}".format(len(ineff_df["size"])))
-print("len of eff_data before processing: {}".format(len(eff_df["size"])))
+logging.info("len of ineff_data before processing: {}".format(len(ineff_df["size"])))
+logging.info("len of eff_data before processing: {}".format(len(eff_df["size"])))
 
 
 def plot_time(ineff_df, eff_df):
