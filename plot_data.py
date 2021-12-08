@@ -78,7 +78,7 @@ def plot_time(ineff_df, eff_df):
 	plt.plot(ineff_df['size'], ineff_df["ineff_time"], linestyle='solid', label="ineff_time")
 	plt.plot(eff_df['size'], eff_df["eff_time"], linestyle='solid', label="eff_time")
 	plt.legend()
-	plt.title("size vs time")
+	plt.title("size vs time in seconds")
 	plt.xlabel("size")
 	plt.ylabel("time")
 
@@ -90,7 +90,7 @@ def plot_memory_usage(ineff_df, eff_df):
 	plt.plot(ineff_df['size'], ineff_df["ineff_memory_usage"], linestyle='solid', label="ineff_memory")
 	plt.plot(eff_df['size'], eff_df["eff_memory_usage"], linestyle='solid', label="eff_memory")
 	plt.legend()
-	plt.title("size vs memory")
+	plt.title("size vs memory in KB")
 	plt.xlabel("size")
 	plt.ylabel("memory")
 	plt.yscale("log")
