@@ -46,7 +46,7 @@ def generate_data(str1_len, str2_len):
 
     f = open("data/data_efficient.txt", "a")
 
-    data_str = "{},{},{}\n".format(len(first_seq_div) * len(second_seq_div), div_time, div_conq_max_mem)
+    data_str = "{},{},{}\n".format(len(first_seq_div) + len(second_seq_div), div_time, div_conq_max_mem)
 
     f.write(data_str)
 
@@ -54,7 +54,7 @@ def generate_data(str1_len, str2_len):
 
     f = open("data/data_inefficient.txt", "a")
 
-    data_str = "{},{},{}\n".format(len(first_seq_ineff) * len(second_seq_ineff), ineff_time, ineff_max_mem)
+    data_str = "{},{},{}\n".format(len(first_seq_ineff) + len(second_seq_ineff), ineff_time, ineff_max_mem)
 
     f.write(data_str)
 

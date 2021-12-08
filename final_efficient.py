@@ -52,7 +52,7 @@ f.close()
 
 f = open("./data/data_efficient.txt", "a")
 
-data_str = "{},{},{}\n".format(len(first_seq_div)*len(second_seq_div), div_conq_time, div_conq_max_mem)
+data_str = "{},{},{}\n".format(len(first_seq_div)+len(second_seq_div), div_conq_time, div_conq_max_mem)
 
 f.write(data_str)
 
