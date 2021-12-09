@@ -95,8 +95,6 @@ def plot_memory_usage(ineff_df, eff_df):
 	plt.title("size vs memory in KB")
 	plt.xlabel("size")
 	plt.ylabel("memory")
-	plt.yscale("log")
-	plt.xscale("log")
 
 	plt.savefig('size_vs_memory.png')
 	plt.clf()

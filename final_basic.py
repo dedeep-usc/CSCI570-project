@@ -39,7 +39,7 @@ INEFF_OP = INEFF_OP.format(
 		float(ineff_max_mem)
 	)
 
-f = open("output_ineff.txt", "w")
+f = open("output.txt", "w")
 
 f.write(INEFF_OP)
 

@@ -44,7 +44,7 @@ DIV_CONQ_OP = DIV_CONQ_OP.format(
 		float(div_conq_max_mem)
 	)
 
-f = open("output_eff.txt", "w")
+f = open("output.txt", "w")
 
 f.write(DIV_CONQ_OP)
 
