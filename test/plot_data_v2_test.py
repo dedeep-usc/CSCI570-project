@@ -65,7 +65,7 @@ def generate_data(str1_len, str2_len):
 
 n = 500
 
-for i in range(1, 1001, 100):
+for i in range(1, 1001, 50):
     str1_len = str2_len = i
 
     generate_data(str1_len, str2_len)
