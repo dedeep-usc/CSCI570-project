@@ -2,7 +2,7 @@
 
 1) To run the basic version - ./5204324511_9179569444_6092528088_basic.sh
 
-2) To run the efficient version - ./5204324511_9179569444_6092528088_efficient.s
+2) To run the efficient version - ./5204324511_9179569444_6092528088_efficient.sh
 
 3) size vs memory - 'MemoryPlot.png'
 
@@ -85,7 +85,7 @@ We found that the basic version ran quicker than the memory efficient version. T
 
 The memory efficient versions runs a bit slower than the basic version but its not by much. It was approximately 1.5-2x slower than the basic version. The main reason for this slowdown is the extra running of the space efficient version in the divide and conquer step to find the optimal point to split the string for the next divide and conquer step.
 
-One more interesting observation we made was regarding the theoretical time complexity of the memory efficient version compared to the basic version. Theoretically, memory efficient version must have run 2 times slower than the basic version. This holds true for the cases where the input size was lesser than or equal to approximately 500(m+n) characters, for these inout cases, the time used by the memory efficient version was very close to 2 times the time used by the basic version. Once we crossed this threshold of 500(m+n) characters, the memory efficient version takes approzimately 1.5x times the time taken by the basic version.
+One more interesting observation we made was regarding the theoretical time complexity of the memory efficient version compared to the basic version. Theoretically, memory efficient version must have run 2 times slower than the basic version. This holds true for the cases where the input size was lesser than or equal to approximately 500(m+n) characters, for these input cases, the time used by the memory efficient version was very close to 2 times the time used by the basic version. Once we crossed this threshold of 500(m+n) characters, the memory efficient version takes approzimately 1.5x times the time taken by the basic version.
 
 ================================================================================================================================
 
