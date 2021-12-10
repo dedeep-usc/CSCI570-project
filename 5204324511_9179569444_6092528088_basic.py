@@ -48,7 +48,7 @@ f.close()
 
 f = open("./data/data_inefficient.txt", "a")
 
-data_str = "{},{},{}\n".format(len(first_seq_ineff)+len(second_seq_ineff), ineff_time, ineff_max_mem)
+data_str = "{},{},{}\n".format(len(str1)+len(str2), ineff_time, ineff_max_mem)
 
 f.write(data_str)
 
