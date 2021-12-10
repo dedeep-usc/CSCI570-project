@@ -10,10 +10,10 @@ from main.divide_conquer import DivideConquerSeqAlignment
 a = ["A", "C", "G", "T"]
 str1 = ""
 str2 = ""
-for i in range(500):
+for i in range(15):
 	str1 += a[random.randint(0, 3)]
 
-for i in range(500):
+for i in range(15):
 	str2 += a[random.randint(0, 3)]
 
 ineff = InefficientSeqAlignment()
@@ -24,14 +24,14 @@ div_conq_alignment = DivideConquerSeqAlignment(eff=eff, ineff=ineff)
 tracemalloc.start()
 first_seq_div, second_seq_div, cost_div = div_conq_alignment.div_conq_alignment(str1, str2)
 current, peak = tracemalloc.get_traced_memory()
-logging.info(f"Peak for divide conquer was {peak / 10**6}MB")
+logging.info(f"Peak for divide conquer was {peak / 10**3}KB")
 tracemalloc.stop()
 
 
 tracemalloc.start()
 first_seq_ineff, second_seq_ineff, cost_ineff = ineff.find_min_cost(str1, str2)
 current, peak = tracemalloc.get_traced_memory()
-logging.info(f"Peak for inefficient was {peak / 10**6}MB")
+logging.info(f"Peak for inefficient was {peak / 10**3}KB")
 tracemalloc.stop()
 
 
