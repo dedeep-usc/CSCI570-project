@@ -1,12 +1,12 @@
-﻿File names/ steps to run - 
+﻿File names/ steps to run -
 
 1) To run the basic version - ./5204324511_9179569444_6092528088_basic.sh
 
 2) To run the efficient version - ./5204324511_9179569444_6092528088_efficient.s
 
-3) size vs memory - 'size_vs_memory.png'
+3) size vs memory - 'MemoryPlot.png'
 
-4) size vs time - 'size_vs_time.png'
+4) size vs time - 'CPUPlot.png'
 
 ================================================================================================================================
 
@@ -55,8 +55,8 @@ Directory Structure:
 |			|
 |			- inefficient_driver.py
 |			|
-|			-__init__.py	
-|	
+|			-__init__.py
+|
 ----test---- plot_data_test.py
 |			|
 |			- plot_data_v2_test.py
@@ -64,7 +64,7 @@ Directory Structure:
 |			- stress_test.py
 |			|
 |			-__init__.py
-|			
+|
 ----data----data_efficient.txt
 |			|
 |----------data_inefficient.txt
@@ -73,19 +73,19 @@ Directory Structure:
 
 Results:
 
-Details about memory usage - 
+Details about memory usage -
 
-We found that the memory efficient version on the average uses much lesser memory than the basic version. The only case where the basic version used lesser memory than the memory efficient version was when the input size was very small (~ <=30(m+n)). After a certain point, the basic version would start using up a lot of memory whereas the memory efficient version would remain very low. For input size of approximately 2000(m+n) characters, the memory efficient version used up around 250kb whereas the basic version uses around 33000kb. 
+We found that the memory efficient version on the average uses much lesser memory than the basic version. The only case where the basic version used lesser memory than the memory efficient version was when the input size was very small (~ <=30(m+n)). After a certain point, the basic version would start using up a lot of memory whereas the memory efficient version would remain very low. For input size of approximately 2000(m+n) characters, the memory efficient version used up around 250kb whereas the basic version uses around 33000kb.
 
 We observe that the primary reason for that is ensuring the number of columns is 2 in the DP array for the memory efficient version in each divide and conquer step. Another factor that contributes to this is that the building the strings with the help of the inefficient/basic version happens only when the subproblems is of size less than 2. This will ensure that the memory used up by the basic version remains in check throughout the execution of the algorithm.
 
-Details about execution time - 
+Details about execution time -
 
-We found that the basic version ran quicker than the memory efficient version. This is obvious as we find the optimal cost in one go and then backtrack the results to find the strings. 
+We found that the basic version ran quicker than the memory efficient version. This is obvious as we find the optimal cost in one go and then backtrack the results to find the strings.
 
 The memory efficient versions runs a bit slower than the basic version but its not by much. It was approximately 1.5-2x slower than the basic version. The main reason for this slowdown is the extra running of the space efficient version in the divide and conquer step to find the optimal point to split the string for the next divide and conquer step.
 
-One more interesting observation we made was regarding the theoretical time complexity of the memory efficient version compared to the basic version. Theoretically, memory efficient version must have run 2 times slower than the basic version. This holds true for the cases where the input size was lesser than or equal to approximately 500(m+n) characters, for these inout cases, the time used by the memory efficient version was very close to 2 times the time used by the basic version. Once we crossed this treshold of 500(m+n) characters, the memory efficient version takes approzimately 1.5x times the time taken by the basic version. 
+One more interesting observation we made was regarding the theoretical time complexity of the memory efficient version compared to the basic version. Theoretically, memory efficient version must have run 2 times slower than the basic version. This holds true for the cases where the input size was lesser than or equal to approximately 500(m+n) characters, for these inout cases, the time used by the memory efficient version was very close to 2 times the time used by the basic version. Once we crossed this threshold of 500(m+n) characters, the memory efficient version takes approzimately 1.5x times the time taken by the basic version.
 
 ================================================================================================================================
 

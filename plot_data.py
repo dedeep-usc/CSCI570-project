@@ -84,7 +84,7 @@ def plot_time(ineff_df, eff_df):
 	plt.xlabel("size (number of characters)")
 	plt.ylabel("time in seconds")
 
-	plt.savefig('size_vs_time.png')
+	plt.savefig('CPUPlot.png')
 	plt.clf()
 
 
@@ -96,7 +96,7 @@ def plot_memory_usage(ineff_df, eff_df):
 	plt.xlabel("size (number of characters)")
 	plt.ylabel("memory in KB")
 
-	plt.savefig('size_vs_memory.png')
+	plt.savefig('MemoryPlot.png')
 	plt.clf()
 
 plot_time(ineff_df, eff_df)
