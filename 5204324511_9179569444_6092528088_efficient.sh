@@ -3,4 +3,4 @@
 set -e
 
 export PYTHONPATH=$PYTHONPATH:$(pwd)
-python3 final_efficient.py input.txt
+python3 5204324511_9179569444_6092528088_efficient.py input.txt
